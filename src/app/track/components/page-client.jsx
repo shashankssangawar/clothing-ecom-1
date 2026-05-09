@@ -10,7 +10,7 @@ import { Search, Package, Truck, CheckCircle2, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function TrackingPageClient({ searchParams }) {
-  const initialOrderId = searchParams.get("id") || "";
+  const initialOrderId = searchParams?.id || "";
 
   const [orderId, setOrderId] = useState(initialOrderId);
   const [order, setOrder] = useState(null);

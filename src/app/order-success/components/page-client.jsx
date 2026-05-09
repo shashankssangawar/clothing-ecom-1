@@ -7,7 +7,7 @@ import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 
 export default function OrderSuccessPageClient({ searchParams }) {
-  const orderId = searchParams.get("id");
+  const orderId = searchParams?.id;
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

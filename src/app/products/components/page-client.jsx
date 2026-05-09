@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function ProductsPageClient({ searchParams }) {
   const { products, loading } = useProducts();
-  const categoryFilter = searchParams.get("category");
+  const categoryFilter = searchParams?.category;
   const [activeSort, setActiveSort] = useState("newest");
 
   const filteredProducts = useMemo(() => {
